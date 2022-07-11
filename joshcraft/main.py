@@ -257,7 +257,6 @@ class Window(pyglet.window.Window):
                     ((button == mouse.LEFT) and (modifiers & key.MOD_CTRL)):
                 # ON OSX, control + left click = right click.
                 if previous:
-                    print(type(self.block))
                     self.block.add_block(previous, self.block)
             elif button == pyglet.window.mouse.LEFT and block:
                 texture = self.block.world[block]

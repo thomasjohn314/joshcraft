@@ -11,7 +11,7 @@ from util import *
 
 class Block:
 
-    def __init__(self):
+    def __init__(self, name: str):
 
         # A Batch is a collection of vertex lists for batched rendering.
         self.batch = pyglet.graphics.Batch()
@@ -35,7 +35,7 @@ class Block:
         # Simple function queue implementation. The queue is populated with
         # _show_block() and _hide_block() calls
         self.queue = deque()
-
+        self.id = self.block_id_from_name(name)
         self._initialize()
 
     def _initialize(self):
@@ -188,6 +188,7 @@ class Block:
         texture = self.world[position]
         self.shown[position] = texture
         if immediate:
+            print(texture)
             self._show_block(position, texture)
         else:
             self._enqueue(self._show_block, position, texture)

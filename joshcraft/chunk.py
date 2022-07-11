@@ -2,6 +2,7 @@ from numpy import zeros, prod
 
 from block import Block
 
+
 class Chunk:
     def __init__(self, dimensions=(2, 2, 2)) -> None:
         self.dim_x, self.dim_y, self.dim_z = dimensions

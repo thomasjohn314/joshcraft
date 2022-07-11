@@ -1,6 +1,2 @@
-from numpy import array
-
-class World:
-    def __init__(self):
-        self.data = array()
-    def add(self)
+def load_world(folder_path: str):
+    pass # TODO load world chunks and put in array
